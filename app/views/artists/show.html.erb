@@ -1,0 +1,17 @@
+<p>
+  <strong>Artist name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <strong>Groups:</strong>
+  <%= @artist.groups.each  do |group|%>
+    <%= group.name %><br>
+  <% end %>
+</p>
+
+<h2>Albums</h2>
+<%= render @artist.albums %>
+
+
+<%= link_to 'Back', artists_path %>

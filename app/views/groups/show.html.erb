@@ -1,0 +1,17 @@
+<p>
+  <strong>Group name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Group members:</strong>
+  <%= @group.artists.each  do |artist|%>
+    <%= artist.name %><br>
+  <% end %>
+</p>
+
+<h2>Albums</h2>
+<%= render @group.albums %>
+
+
+<%= link_to 'Back', groups_path %>
